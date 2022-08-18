@@ -1,0 +1,31 @@
+try:
+    z = print # to keep print function work
+    x = print # use it to test 
+    zint =int 
+    zprint = print # replace print
+    zhelp = help
+    ztype = type
+    zbool = bool
+    zprint("001 print replaced") # Test001 if print replaced
+    z()  #space
+    zhelp("keywords") # Test002 if help replaced
+    z("002 help replaced")
+    int = "stop & free"    
+    print = "stop & free" # unreserved print   
+    help = "stop & free"       
+    type = "stop & free"      
+    bool = "stop & free"    
+    z()  #space
+    if print == x:  # Test003 if print unreserved 
+        print("003 print reserved")
+    else:
+        z("003 print unreserved")
+    z()  #space
+    print = x # reserved print
+    if print == x:  # Test004 if print reserved
+        print("004 print reserved")
+    else:
+        z("004 print unreserfed")
+    z()  #space
+except Exception as y:
+    z(y)
